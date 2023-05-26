@@ -21,10 +21,10 @@ class TrainDataset(Dataset):
         self.label = []
         self.count={}
         for path in paths:
-            self.list = os.listdir(os.path.join(path, "Imgs"))
+            self.list = os.listdir(os.path.join(path, "tam"))
             for i in self.list:
-                self.image.append(os.path.join(path, "Imgs", i))
-                self.label.append(os.path.join(path, "GT", i.split(".")[0] + ".png"))
+                self.image.append(os.path.join(path, "tam", i))
+                self.label.append(os.path.join(path, "mask", i.split(".")[0] + ".png"))
         print("Datasetsize:", len(self.image))
     def __len__(self):
         return len(self.image)

@@ -1,1 +1,1 @@
-python -m torch.distributed.launch --nproc_per_node=8 train.py --path "/data/home/mc05374/dataset/SAN_8w" --pretrain "/data/home/mc05374/pths/FSPNet_best_0.01137.pth"
+python -m torch.distributed.launch --nproc_per_node=8 train.py --path "/data/home/mc05374/dataset/SAN_8w" --pretrain "/data/home/mc05374/pths/FSPNet_best_0.01137.pth" > file.txt 2>&1

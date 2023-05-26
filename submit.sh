@@ -22,4 +22,4 @@ module add cuda/10.0.130
 ulimit -s unlimited
  
 # singularity exec --nv --bind /data:/data /share/apps/singularity/simg/pytorch/miniconda3-pytorch bash -c "source activate py36; which python;pip list;python -c 'import torch as t; print(t.cuda.is_available(),t.cuda.device_count())'"
-singularity exec --nv --bind /data:/data /share/apps/singularity/simg/pytorch/miniconda3-pytorch bash -c "bash ./run_normal/train.sh"
+singularity exec --nv --bind /data:/data /share/apps/singularity/simg/pytorch/miniconda3-pytorch.simg bash -c "bash ./run_normal/train.sh"
